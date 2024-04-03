@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/gradient_bg">
+    <RelativeLayout
+        android:id="@+id/firstRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saisir la ville"
+            android:textColor="#A9A9A9"
+            android:padding="8dp"/>
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewHint"
+            android:padding="8dp"
+            android:background="#80000000"
+            android:textColor="@android:color/white"
+            android:hint=""
+            android:inputType="text"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@id/firstRelativeLayout"
+        android:layout_above="@id/navigationBar">
+        <LinearLayout android:id="@+id/addressContainer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="10dp">
+            <TextView android:id="@+id/address" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="24dp"
+                android:text="PARIS, FR"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressContainer"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_buttonoff"
+            android:text="Accueil"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/home"/>
+
+        <Button
+            android:id="@+id/buttonForecast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prévisions"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_buttonon"
+            android:drawableLeft="@drawable/forecast"
+            android:layout_toEndOf="@id/buttonHome"
+            android:layout_marginStart="8dp"/>
+
+        <Button
+            android:id="@+id/buttonFavorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favoris"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_buttonoff"
+            android:drawableLeft="@drawable/fave"
+            android:layout_toEndOf="@id/buttonForecast"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/loader" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/errorText" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_centerInParent="true"
+        android:visibility="gone" android:text="Veuillez entrer une ville"/>
+</RelativeLayout>

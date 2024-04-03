@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:padding="25dp">
+    <LinearLayout android:id="@+id/addCity" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="3">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:padding="15dp"
+            android:hint="Entrez une ville"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/rounded_buttonoff"
+            android:layout_toRightOf="@id/editText"
+            android:drawableStart="@drawable/add3"
+            android:text="Ajout"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/listLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addCity"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_buttonoff"
+            android:text="Accueil"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/home"
+            android:drawablePadding="8dp" />
+        <Button
+            android:id="@+id/buttonForecast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prévisions"
+            android:textSize="8sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_buttonoff"
+            android:drawableLeft="@drawable/forecast"
+            android:layout_toEndOf="@id/buttonHome"
+            android:layout_marginStart="8dp"/>
+        <Button
+            android:id="@+id/buttonFavorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favoris"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_buttonon"
+            android:drawableLeft="@drawable/fave"
+            android:layout_toEndOf="@id/buttonForecast"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
