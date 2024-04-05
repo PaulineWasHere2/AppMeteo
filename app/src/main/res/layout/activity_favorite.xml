@@ -53,8 +53,7 @@
             android:text="Accueil"
             android:textSize="10sp"
             android:textColor="@android:color/white"
-            android:drawableLeft="@drawable/home"
-            android:drawablePadding="8dp" />
+            android:drawableLeft="@drawable/home" />
         <Button
             android:id="@+id/buttonForecast"
             android:layout_width="0dp"
